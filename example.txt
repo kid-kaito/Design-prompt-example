@@ -1,0 +1,347 @@
+You are a senior frontend architect and product designer.
+
+
+
+Design and implement a modern production-grade UI for a software platform.
+
+
+
+## Product Context
+
+
+
+The application is a:
+
+Scheduler application that will be used to automate testing workflow of a wafer inspection machine. A Workflow (a particular type of testing) would have different components. Each component would require some inputs (configuration) taken from the user using forms. Based on the configuartion of the components, the UI will make gRPC calls to the backend service. I want the UI to be pulgable i.e. the specification of the gRPC calls would be handeled by some module that can provide abstact interface to the UI so that the behaviour can be changed later in that module. The complete specification for UI is given below. The scheduler would have many parts other than the desktop UI. But for now only desktop UI is to be focused. 
+
+---
+
+
+
+## Platform
+
+
+
+Target platform:
+
+
+
+* Desktop App using tauri
+
+
+
+The UI should feel:
+
+
+
+* modern
+
+* fast
+
+* professional
+
+* developer-focused
+
+* scalable for enterprise usage
+
+
+
+---
+
+
+
+## Technical Requirements
+
+
+
+Frontend stack:
+
+
+
+* React + TypeScript
+
+* TailwindCSS
+
+* Zustand for state management
+
+* TanStack Query for API state
+
+* shadcn/ui components
+
+* Framer Motion for subtle animations
+
+
+
+Desktop runtime:
+
+
+
+* Tauri preferred
+
+
+
+---
+
+
+
+## Backend Communication
+
+
+
+The frontend will communicate with backend services using:
+
+
+
+* gRPC
+
+
+
+Design the architecture so that:
+
+
+
+* API layer is abstracted
+
+* Services are separated cleanly
+
+* Easy to replace mock APIs later
+
+* Supports loading states
+
+* Supports retries and error handling
+
+* Supports WebSocket or streaming updates in future
+
+
+
+Create:
+
+
+
+* API client layer
+
+* Service abstraction layer
+
+* Example API contracts/interfaces
+
+
+
+---
+
+
+
+## UI/UX Requirements
+
+
+
+The app should contain:
+
+
+
+### Main Layout (See the attached image 1)
+
+
+
+* Sidebar navigation
+
+* Title Bar
+
+* Workspace/content area
+
+* Status indicator section
+
+* Notifications/toast system
+
+
+
+### Screens
+
+
+
+Create designs/components for:
+
+
+
+* Dashboard
+
+* Job/Task list
+
+* Execution history
+
+* Logs viewer
+
+* Worker/agent monitoring
+
+* Settings page
+
+* Create/Edit workflow page
+
+
+
+---
+
+
+
+## Forms
+
+
+
+IMPORTANT:
+
+The exact form schema is NOT finalized yet.
+
+
+
+So:
+
+
+
+* Create DUMMY FORMS with placeholder fields
+
+* Design forms to be schema-driven and dynamically generated
+
+* Use reusable form components
+
+* Include examples of:
+
+
+
+  * text input
+
+  * dropdown
+
+  * checkbox
+
+  * radio button
+
+  * date picker
+
+  * code editor
+
+  * file upload
+
+  * tags input
+
+
+
+The architecture should make it easy later to:
+
+
+
+* fetch form definitions from backend
+
+* dynamically render forms from JSON schemas
+
+* validate fields dynamically
+
+
+
+Use realistic placeholder labels and dummy data.
+
+
+
+Example:
+
+
+
+* "Workflow Name"
+
+* "Execution Strategy"
+
+* "Retry Count"
+
+* "Environment Variables"
+
+
+
+---
+
+
+
+## Design System
+
+
+
+Design style:
+
+
+
+* clean dark theme
+
+* inspired by Linear, Raycast, GitHub, Cursor, Warp, and modern DevTools
+
+
+
+Requirements:
+
+
+
+* responsive layout
+
+* keyboard shortcuts support
+
+* command palette
+
+* smooth animations
+
+* empty states
+
+* skeleton loaders
+
+* modular component architecture
+
+
+
+---
+
+
+
+## Deliverables
+
+
+
+Generate:
+
+
+
+1. Folder structure
+
+2. Architecture explanation
+
+3. Core reusable components
+
+4. API abstraction example
+
+5. Mock services
+
+6. Main screens
+
+7. Form engine architecture
+
+8. State management setup
+
+9. Example gRPC integration structure
+
+10. Theme/design tokens
+
+
+
+Focus heavily on:
+
+
+
+* maintainability
+
+* scalability
+
+* clean architecture
+
+* enterprise-grade UX
+
+
+
+Do NOT create simplistic tutorial-level code.
+
+Act like this UI will be used by a real SaaS product with thousands of users.
+
+
